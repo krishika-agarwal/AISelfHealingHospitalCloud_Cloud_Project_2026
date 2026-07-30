@@ -2,7 +2,7 @@
 
 9. Current XAI-based anomaly detection research does not provide a reliable mechanism to determine whether generated explanations truly represent the underlying cause of an anomaly. This limitation becomes more significant in cloud infrastructure environments where formal ground truth cannot be established.
 
-10. Existing contextual anomaly detection methods based on Quantile Regression Forests are not designed for streaming environments. This limits their usefulness for cloud infrastructure, where system metrics are generated continuously and require real-time analysis.
+10. Existing contextual anomaly detection methods based on Quantile Regression Forests are not designed for streaming environments. This limits their usefulness for cloud infrastructure, where system metrics are generated continuously and require real-time analysis.  
 
 11. Although the proposed workflow successfully performs detection, explanation, and classification, it does not support automated response or recovery after an anomaly has been identified. As a result, the process remains dependent on manual decision-making.
 
@@ -13,5 +13,4 @@
 14. Although the study identifies security concerns, limited technical expertise, and staffing shortages as major barriers to cloud adoption, it does not investigate how intelligent automation or AI-based operational support could help address these challenges.
 
 15. The study recognizes the importance of monitoring in serverless healthcare systems but does not describe the processes involved in anomaly detection, explanation, or automated recovery. As a result, monitoring remains a conceptual component rather than an intelligent operational mechanism.
-=======
->>>>>>> develop:docs/Research_Gap_Khushi.md
+
