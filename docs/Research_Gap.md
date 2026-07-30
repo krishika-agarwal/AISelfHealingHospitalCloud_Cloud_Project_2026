@@ -1,4 +1,4 @@
-# Research Gaps (Ppaer wise)
+# Research Gaps (Paper wise)
 
 1. Adaptive anomaly detection has been explored successfully, but identifying an anomaly and understanding the actual reason behind it are still separate issues. The study also does not examine how this type of adaptive detection would perform in cloud infrastructure supporting Hospital Information Systems.
 
