@@ -1,5 +1,4 @@
 # Research Gaps (Paper wise)
-<<<<<<<< HEAD:docs/Research_Gap_Krishika.md
 
 1. Adaptive anomaly detection has been explored successfully, but identifying an anomaly and understanding the actual reason behind it are still separate issues. The study also does not examine how this type of adaptive detection would perform in cloud infrastructure supporting Hospital Information Systems.
 
@@ -14,7 +13,5 @@
 6. Temporal causal analysis improves root-cause identification, but diagnosis and automated recovery remain separate processes. There is also limited evidence regarding the use of this type of causal RCA for cloud infrastructure supporting Hospital Information Systems.
 
 7. The paper demonstrates that an AI agent can perform autonomous cloud fault mitigation, but broader validation and structured explanation of the agent's decisions remain limited. These issues become especially important when autonomous actions are considered for critical cloud environments.
-========
->>>>>>>> feature/Khushi:docs/Research_Gap_Khushi.md
 
 8. Although prediction and automated remediation are considered together, the reasoning connecting monitored cloud conditions, failure predictions and selected remediation actions is not clearly explained. Detailed experimental validation and healthcare-specific evaluation also remain limited.
