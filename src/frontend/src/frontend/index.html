@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Cloud Self-Healing Dashboard</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #1f2937;
+}
+
+header {
+    background: #153b63;
+    color: white;
+    padding: 22px 6%;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 25px;
+}
+
+header p {
+    margin: 0;
+    color: #dbeafe;
+}
+
+main {
+    max-width: 1150px;
+    margin: 28px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    margin: 25px 0 14px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 3px 12px #0f172a0a;
+}
+
+.card h3 {
+    margin: 0 0 14px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.value {
+    font-size: 23px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.description {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.status-high {
+    color: #b91c1c;
+}
+
+.status-normal {
+    color: #15803d;
+}
+
+button {
+    background: #153b63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 17px;
+    cursor: pointer;
+    margin: 8px 8px 0 0;
+}
+
+button:hover {
+    background: #245787;
+}
+
+.note {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 8px;
+    padding: 13px;
+    color: #9a3412;
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 35px;
+    padding: 20px;
+    text-align: center;
+    color: #64748b;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Hospital Cloud Self-Healing System</h1>
+    <p>AI-powered server monitoring, explainability and recovery</p>
+</header>
+
+<main>
+    <h2 class="section-title">System Overview</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Anomaly Status</h3>
+            <div class="value status-high" id="anomaly">Detected</div>
+        </div>
+
+        <div class="card">
+            <h3>Risk Level</h3>
+            <div class="value status-high" id="risk">High</div>
+        </div>
+
+        <div class="card">
+            <h3>Root Cause</h3>
+            <div class="value" id="cause">Possible resource overload</div>
+        </div>
+
+        <div class="card">
+            <h3>Recovery Status</h3>
+            <div class="value" id="recovery">Pending</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">AI Explanation</h2>
+    <div class="card">
+        <p class="description" id="explanation">
+            Unusual spike in CPU and memory usage.
+        </p>
+    </div>
+
+    <h2 class="section-title">System Actions</h2>
+    <div class="card">
+        <p class="description" id="message">
+            Sample demonstration data is being displayed.
+        </p>
+
+        <button onclick="showSampleAnomaly()">
+            Load Sample Anomaly
+        </button>
+
+        <button onclick="showSampleNormal()">
+            Load Sample Normal State
+        </button>
+    </div>
+
+    <div class="note">
+        Demonstration mode: these values are sample data, not live
+        AWS metrics or verified AI predictions. No recovery action
+        is executed by these buttons.
+    </div>
+</main>
+
+<footer>
+    AI-Driven Self-Healing Cloud Infrastructure | Project Dashboard
+</footer>
+
+<script>
+function showSampleAnomaly() {
+    document.getElementById("anomaly").textContent = "Detected";
+    document.getElementById("anomaly").className =
+        "value status-high";
+
+    document.getElementById("risk").textContent = "High";
+    document.getElementById("risk").className =
+        "value status-high";
+
+    document.getElementById("explanation").textContent =
+        "Unusual spike in CPU and memory usage.";
+
+    document.getElementById("cause").textContent =
+        "Possible resource overload";
+
+    document.getElementById("recovery").textContent = "Pending";
+
+    document.getElementById("message").textContent =
+        "Anomaly example loaded. Recovery has not been performed.";
+}
+
+function showSampleNormal() {
+    document.getElementById("anomaly").textContent = "Normal";
+    document.getElementById("anomaly").className =
+        "value status-normal";
+
+    document.getElementById("risk").textContent = "Low";
+    document.getElementById("risk").className =
+        "value status-normal";
+
+    document.getElementById("explanation").textContent =
+        "No significant abnormal behaviour in this sample.";
+
+    document.getElementById("cause").textContent =
+        "No suspected cause";
+
+    document.getElementById("recovery").textContent =
+        "Not Required";
+
+    document.getElementById("message").textContent =
+        "Normal example loaded. This is sample data, not a model prediction.";
+}
+</script>
+
+</body>
+</html>
